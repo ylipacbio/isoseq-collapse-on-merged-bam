@@ -6,19 +6,19 @@ thus,
 
 Please wait for official bug fix bug in SMRTLink 8.0 release!
 
-Note this is not official bug fix, nor official patch.
-No guarantee, no libility, try at your own risk.
-
-here is a solution for Advanced Users who is willing to take a risk.
+Note this is not official bug fix, this is NOT official hot patch. 
+This is ISO-compliant and there is No guarantee, no libility.
+For Advanced Users willing to try at their own risk, here it is.
 
 Prerequisite:
   You have access to SMRTLink 7.0 build for command line tools such as
-  `dataset`, `python -m isocollapse.tasks.collapse_mapped_isoforms`, `samtools`
+  `dataset`, `python -m isocollapse.tasks.collapse_mapped_isoforms`, `samtools`, `python`
 
 Steps:
 1. Download `isocollapse-on-merged-bam.sh` and `reset-transcriptalignmentset.py`
 ```
-wget
+wget https://github.com/ylipacbio/isoseq-collapse-on-merged-bam/blob/master/isocollapse-on-merged-bam.sh
+wget https://github.com/ylipacbio/isoseq-collapse-on-merged-bam/blob/master/reset-transcriptalignmentset.py
 ```
 2. identify job root of SMRTLink IsoSeq with Mapping job, ${job_root}, and 
 3. then call 
