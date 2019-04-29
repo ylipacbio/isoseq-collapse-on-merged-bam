@@ -16,13 +16,17 @@ Prerequisite:
 
 Steps:
 1. Download `isocollapse-on-merged-bam.sh` and `reset-transcriptalignmentset.py`
-```
-wget https://github.com/ylipacbio/isoseq-collapse-on-merged-bam/blob/master/isocollapse-on-merged-bam.sh
-wget https://github.com/ylipacbio/isoseq-collapse-on-merged-bam/blob/master/reset-transcriptalignmentset.py
-```
+
+  wget https://github.com/ylipacbio/isoseq-collapse-on-merged-bam/blob/master/isocollapse-on-merged-bam.sh
+  wget https://github.com/ylipacbio/isoseq-collapse-on-merged-bam/blob/master/reset-transcriptalignmentset.py
+
 2. identify job root of SMRTLink IsoSeq with Mapping job, ${job_root}, and 
 3. then call 
+
    bash isocollapse-on-merged-bam.sh  ${job_root}
+   
 e.g., if SMRTLink IsoSeq job path is: /mymount/myjob/001/0012345, run
+
    bash isocollapse-on-merged-bam.sh  /mymount/myjob/001/0012345
-   You will see regenerated output files out.gff, out.fastq etc
+
+You will see regenerated output files out.gff, out.fastq etc
