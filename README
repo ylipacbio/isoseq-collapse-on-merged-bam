@@ -1,0 +1,28 @@
+There is a bug in SMRTLink 7.0 IsoSeq with Mapping workflow, which was 
+- introduced by chunking transcripts bam file into multiple small files, 
+- while IsoSeq collapsing is performed on each of the chunk (each small file),
+thus,
+- transcripts mapping to the same genomic location (which should be placed in the same group), may be put into different gene groups. 
+
+Please wait for official bug fix bug in SMRTLink 8.0 release!
+
+Note this is not official bug fix, nor official patch.
+No guarantee, no libility, try at your own risk.
+
+here is a solution for Advanced Users who is willing to take a risk.
+
+Prerequisite:
+  You have access to SMRTLink 7.0 build for command line tools such as
+  `dataset`, `python -m isocollapse.tasks.collapse_mapped_isoforms`, `samtools`
+
+Steps:
+1. Download `isocollapse-on-merged-bam.sh` and `reset-transcriptalignmentset.py`
+```
+wget
+```
+2. identify job root of SMRTLink IsoSeq with Mapping job, ${job_root}, and 
+3. then call 
+   bash isocollapse-on-merged-bam.sh  ${job_root}
+e.g., if SMRTLink IsoSeq job path is: /mymount/myjob/001/0012345, run
+   bash isocollapse-on-merged-bam.sh  /mymount/myjob/001/0012345
+   You will see regenerated output files out.gff, out.fastq etc
